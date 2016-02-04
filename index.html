@@ -271,6 +271,98 @@ STM&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x663E;&#x5F0F;&#x7684;&#x9501;&#x65
 
 
   
+    <article id="post-clojure函数学习" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/03/clojure函数学习/" class="article-date">
+  <time datetime="2016-02-03T01:38:00.000Z" itemprop="datePublished">2016-02-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/编程语言/">编程语言</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/03/clojure函数学习/">clojure函数学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. partition/partition-all</a></li>
+<li><a href="#sec-2">2. range</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> partition/partition-all</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+&#x5BF9;seq&#x8FDB;&#x884C;&#x5206;&#x7EC4;&#xFF0C;partition&#x4E0D;&#x4FDD;&#x7559;&#x591A;&#x4F59;&#x9879;&#xFF0C;partition-all&#x4FDD;&#x7559;&#x3002;
+&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5BF9;&#x201C;&#x6BCF;&#x9694;&#x201D;&#x51E0;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x60C5;&#x5F62;&#x4E0B;&#x5904;&#x7406;&#x6570;&#x636E;&#x3002;
+</p>
+
+<p>
+clojure.core/partition-all
+([n] [n coll] [n step coll])
+</p>
+
+<div class="org-src-container">
+
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword"><span class="built_in">partition</span></span> <span class="number">3</span> <span class="collection">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span>]</span>)</span></span><br><span class="line"><span class="comment">;;=&gt;((1 2 3) (4 5 6))</span></span><br><span class="line"><span class="list">(<span class="keyword">partition-all</span> <span class="number">3</span> <span class="collection">[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span>]</span>)</span></span><br><span class="line"><span class="comment">;;=&gt;((1 2 3) (4 5 6) (7 8))</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> range</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;,&#x524D;&#x95ED;&#x540E;&#x5F00;&#x533A;&#x95F4; ([end] [start end] [start end step])
+</p>
+<div class="org-src-container">
+
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword"><span class="built_in">range</span></span> <span class="number">5</span>)</span></span><br><span class="line"><span class="comment">;;=&gt;(1 2 3 4)</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-02-03 Wed 09:38&gt;</span></span></p>
+<p class="author">Author: QINSIMON</p>
+<p class="date">Created: 2016-02-04 Thu 15:13</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 24.5.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer" target="_blank" rel="external">Validate</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/03/clojure函数学习/" data-id="cik7xex8600001pwp7j9urobd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clojure/">clojure</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-源码阅读心得" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/02/01/源码阅读心得/" class="article-date">
@@ -543,7 +635,7 @@ STM&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x663E;&#x5F0F;&#x7684;&#x9501;&#x65
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/编程语言/">编程语言</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/编程语言/">编程语言</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -552,7 +644,7 @@ STM&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x663E;&#x5F0F;&#x7684;&#x9501;&#x65
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/clojure/">clojure</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/viewpoint/">viewpoint</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/clojure/">clojure</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/viewpoint/">viewpoint</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -561,7 +653,7 @@ STM&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x663E;&#x5F0F;&#x7684;&#x9501;&#x65
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/clojure/" style="font-size: 10px;">clojure</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/viewpoint/" style="font-size: 10px;">viewpoint</a>
+      <a href="/tags/clojure/" style="font-size: 20px;">clojure</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/viewpoint/" style="font-size: 10px;">viewpoint</a>
     </div>
   </div>
 
@@ -570,7 +662,7 @@ STM&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x663E;&#x5F0F;&#x7684;&#x9501;&#x65
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -583,6 +675,10 @@ STM&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x663E;&#x5F0F;&#x7684;&#x9501;&#x65
         
           <li>
             <a href="/2016/02/03/clojure初探/">clojure初探</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/03/clojure函数学习/">clojure函数学习</a>
           </li>
         
           <li>
