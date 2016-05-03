@@ -61,6 +61,117 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-test_file" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/03/test_file/" class="article-date">
+  <time datetime="2016-05-03T09:31:00.000Z" itemprop="datePublished">2016-05-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/03/test_file/">Test_file</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. zhe is a test.</a>
+<ul>
+<li><a href="#sec-1-1">1.1. junit.</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> zhe is a test.</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> junit.</h3>
+</div>
+</div>
+
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-05-03 Tue 17:31&gt;</span></span></p>
+<p class="author">Author: QINSIMON</p>
+<p class="date">Created: 2016-05-03 Tue 17:32</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 24.5.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer" target="_blank" rel="external">Validate</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/03/test_file/" data-id="cinr8ldcw0001drwptens8jba" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/06/test/" class="article-date">
+  <time datetime="2016-02-06T00:00:00.000Z" itemprop="datePublished">2016-02-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/06/test/">test</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+<p>
+this is a test.
+</p>
+
+<p class="date">Date: 2016-02-06</p>
+<p class="author">Author: QINSIMON</p>
+<p class="date">Created: 2016-05-03 Tue 17:32</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 24.5.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer" target="_blank" rel="external">Validate</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/06/test/" data-id="cinr8ldbs0000drwp9jsfnf2h" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-clojure初探" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/02/03/clojure初探/" class="article-date">
@@ -305,6 +416,9 @@ STM&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x663E;&#x5F0F;&#x7684;&#x9501;&#x65
 <ul>
 <li><a href="#sec-1">1. partition/partition-all</a></li>
 <li><a href="#sec-2">2. range</a></li>
+<li><a href="#sec-3">3. iterate</a></li>
+<li><a href="#sec-4">4. contains?</a></li>
+<li><a href="#sec-5">5. some</a></li>
 </ul>
 </div>
 </div>
@@ -342,9 +456,65 @@ clojure.core/partition-all
 </div>
 </div>
 
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> iterate</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+([f x]) &#x751F;&#x6210;&#x4E00;&#x4E2A;&#x60F0;&#x6027;&#x5E8F;&#x5217;&#xFF0C;x, (f x), (f (f x)) &#x7B49;&#x3002;
+</p>
+<div class="org-src-container">
+
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line"><span class="list">(<span class="keyword"><span class="built_in">iterate</span></span> #<span class="list">(<span class="keyword"><span class="built_in">+</span></span> <span class="number">3</span> %)</span> <span class="number">1</span>)</span></span><br><span class="line"><span class="comment">;;=&gt;(1 4 7 10 ...)</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> contains?</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+(contains? coll key)
+</p>
+
+<p>
+&#x5982;&#x679C; key &#x5B58;&#x5728;&#x4E8E;&#x7ED9;&#x5B9A; coll &#x4E2D;&#xFF0C; &#x90A3;&#x4E48;&#x8FD4;&#x56DE; true &#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; false &#x3002;
+</p>
+
+<p>
+&#x5BF9;&#x4E8E;&#x90A3;&#x4E9B;&#x4F7F;&#x7528;&#x6570;&#x503C;&#x7D22;&#x5F15;&#xFF08;index&#xFF09;&#x7684; collection &#x3001;&#x6BD4;&#x5982;&#x5411;&#x91CF;&#x548C; Java &#x6570;&#x7EC4;&#x6765;&#x8BF4;&#xFF0C; contains? &#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x7ED9;&#x5B9A;&#x7684;&#x6570;&#x503C; key &#x662F;&#x5426;&#x5728;&#x7D22;&#x5F15;&#x7684;&#x8303;&#x56F4;(range)&#x4E4B;&#x5185;&#x3002;
+</p>
+
+<p>
+contains? &#x4E0D;&#x662F;&#x7EBF;&#x6027;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x64CD;&#x4F5C;&#xFF0C; &#x5B83;&#x53EF;&#x4EE5;&#x5728;&#x5E38;&#x6570;&#x6216;&#x5BF9;&#x6570;&#x590D;&#x6742;&#x5EA6;&#x5185;&#x5B8C;&#x6210;&#x3002;
+&#x5982;&#x679C;&#x8981;&#x68C0;&#x67E5;&#x4E00;&#x4E2A; coll &#x662F;&#x5426;&#x7B26;&#x5408;&#x67D0;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; some &#x51FD;&#x6570;&#x3002;
+</p>
+
+<p>
+(contains? #{4 5 6} <span class="underline">_)
+(contains? [1 1 1 1 1] _</span>)
+(contains? {4 :a 2 :b} <span class="underline">_)
+(not (contains? [1 2 4] _</span>))
+answer: 4
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> some</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+(some pred coll) &#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;(pred x)&#x4E3A;true&#x7684;&#x5143;&#x7D20;x,x&#x4E3A;coll&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x3002;
+</p>
+<div class="org-src-container">
+
+<figure class="highlight clojure"><table><tr><td class="code"><pre><span class="line"><span class="comment">;; 2 is even, so `some` stops there, 3 and 4 are never tested</span></span><br><span class="line"><span class="list">(<span class="keyword">some</span> even? &apos;<span class="list">(<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>)</span>)</span></span><br><span class="line"><span class="comment">;;=&gt; true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;; they are all odd, so not true, i.e. nil</span></span><br><span class="line"><span class="list">(<span class="keyword">some</span> even? &apos;<span class="list">(<span class="number">1</span> <span class="number">3</span> <span class="number">5</span> <span class="number">7</span>)</span>)</span></span><br><span class="line"><span class="comment">;;=&gt; nil</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;; the first logical true value is returned, i.e. anything but nil and false</span></span><br><span class="line"><span class="comment">;; when return nil if its predicate is logical false.</span></span><br><span class="line"><span class="list">(<span class="keyword">some</span> #<span class="list">(<span class="keyword"><span class="built_in">when</span></span> <span class="list">(<span class="keyword"><span class="built_in">even?</span></span> %)</span> %)</span> &apos;<span class="list">(<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>)</span>)</span></span><br><span class="line"><span class="comment">;;=&gt; 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">;; a hash acts as a function returning nil when the</span></span><br><span class="line"><span class="comment">;; key is not present and the key value otherwise.</span></span><br><span class="line"><span class="list">(<span class="keyword">some</span> <span class="collection">{<span class="number">2</span> <span class="string">&quot;two&quot;</span> <span class="number">3</span> <span class="string">&quot;three&quot;</span>}</span> <span class="collection">[<span class="literal">nil</span> <span class="number">3</span> <span class="number">2</span>]</span>)</span></span><br><span class="line"><span class="comment">;;=&gt; &quot;three&quot;</span></span><br></pre></td></tr></table></figure>
+</div>
+</div>
+</div>
+
 <p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-02-03 Wed 09:38&gt;</span></span></p>
 <p class="author">Author: QINSIMON</p>
-<p class="date">Created: 2016-02-04 Thu 15:13</p>
+<p class="date">Created: 2016-05-03 Tue 17:32</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 24.5.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer" target="_blank" rel="external">Validate</a></p>
 
@@ -662,7 +832,7 @@ clojure.core/partition-all
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -674,6 +844,14 @@ clojure.core/partition-all
       <ul>
         
           <li>
+            <a href="/2016/05/03/test_file/">Test_file</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/06/test/">test</a>
+          </li>
+        
+          <li>
             <a href="/2016/02/03/clojure初探/">clojure初探</a>
           </li>
         
@@ -683,14 +861,6 @@ clojure.core/partition-all
         
           <li>
             <a href="/2016/02/01/源码阅读心得/">源码阅读心得</a>
-          </li>
-        
-          <li>
-            <a href="/2016/02/01/三年之痒/">三年之痒</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/08/start/">新的开始</a>
           </li>
         
       </ul>
